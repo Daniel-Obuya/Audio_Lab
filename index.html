@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Audio Player</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Mono&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="player-card">
+
+    <div class="album-art">
+        <svg width="40" height="40" fill="white" viewBox="0 0 24 24">
+            <path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/>
+        </svg>
+    </div>
+
+    <div class="track-info">
+        <h3>Track Title</h3>
+        <p>Artist Name</p>
+    </div>
+
+    <audio id="audio" src="audio.mp3"></audio>
+
+    <input type="range" id="progress" value="0" min="0" max="100">
+
+    <div class="time-row">
+        <span id="time">0:00</span>
+        <span id="duration">0:00</span>
+    </div>
+
+    <div class="controls">
+        <button id="skipBackBtn">⏪</button>
+        <button id="playBtn" class="play-btn">▶</button>
+        <button id="pauseBtn" class="play-btn" style="display:none;">⏸</button>
+        <button id="skipFwdBtn">⏩</button>
+        <button id="muteBtn">🔊</button>
+        <button id="repeatBtn" title="Repeat">🔁</button>
+    </div>
+
+    <input type="range" id="volume" min="0" max="1" step="0.1">
+
+    <p class="hint">Space = Play/Pause • Arrow keys = Skip 10s</p>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
